@@ -12,7 +12,7 @@ type Admin = {
 
 export type Person = Admin;
 
-export const persons: (User | Person)[] /* замените User[] на Person[] */ = [
+export const persons: (User | Person)[]  = [
     {
         name: 'Roman Abramov',
         age: 25,
@@ -35,7 +35,7 @@ export const persons: (User | Person)[] /* замените User[] на Person[]
     }
 ];
 
-export function logPerson(user: User | Person) { // замените User на Person
+export function logPerson(user: User | Person) : void {
     console.log(` - ${user.name}, ${user.age}`);
 }
 
