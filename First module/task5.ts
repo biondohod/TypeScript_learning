@@ -1,12 +1,6 @@
 const powDigits = (num: number): number => {
     const digits : string[] = num.toString().split('');
-    digits.forEach((digit : string, index : number) => {
-        if (digits[index] === '-') {
-            digits[index] = '';
-        }
-        else {
-            digits[index] = (parseInt(digit) ** 2).toString();
-        }
-    });
-    return parseInt(digits.join(''));
+    const powedDigits : number[] = digits.map((digit: string) : number => parseInt(digit) ** 2)
+    if (digits[0] === '-') return parseInt(digits.join(''));
+    return parseInt(powedDigits.join(''));
 }

@@ -4,14 +4,9 @@ const digitsSqrt = (num: number): number => {
     }
     let result: number = 0;
     let digits: number[] =num.toString().split('').map((digit: string) :number => {return parseInt(digit)});
-    digits.forEach((num: number) : void => {result += num});
-    if (result > 9) {
-        while (result > 9) {
-            let sum: number = 0;
-            let digits: number[] =result.toString().split('').map((digit: string) :number => {return parseInt(digit)});
-            digits.forEach((num: number) : void => {sum += num});
-            result = sum;
-        }
+    while (digits.length > 1) {
+        result = digits.reduce((acc: number, current: number) : number => {return acc + current});
+        digits = result.toString().split('').map((digit: string) :number => {return parseInt(digit)});
     }
     return result;
 }
