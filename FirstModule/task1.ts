@@ -9,6 +9,7 @@ const actor: object = {
     languages: ['RU-ru', 'EN-us', 'TR-tr'],
 };
 const howOldWillBeActorAfterTwentyYears = (actor: object): number => {
+    // @ts-ignore
     return parseInt(actor.age) + 20;
 }
 console.log(howOldWillBeActorAfterTwentyYears(actor));
