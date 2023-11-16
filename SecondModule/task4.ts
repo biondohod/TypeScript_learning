@@ -1,12 +1,8 @@
 // @ts-ignore
 const stringTitle = (str : string) : string => {
     const words : string[] = str.split(' ');
-    return words.map((word : string, index : number  ) : string => {
-        if (index === words[0].length) {
-            return '';
-        }
-        return (word[0].toUpperCase() + word.slice(1))
-    }).join(' ');
+    words.splice(words[0].length, 1);
+    return words.map((word : string) : string => word[0].toUpperCase() + word.slice(1)).join(' ');
 }
 
 console.log(stringTitle('Не волнуйтесь, если что-то не работает. Если бы всё работало, вас бы уволили.'));

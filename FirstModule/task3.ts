@@ -1,4 +1,6 @@
+// @ts-ignore
 function someFunc(data) {
+    // @ts-ignore
     return data.reduce((acc, current) => {
         return acc + Number(current.age > 18 && current.isMale)
     }, 0);
@@ -13,6 +15,7 @@ type Human = {
     age: number,
     gender: 'male' | 'female',
 }
+// @ts-ignore
 function someFunc(data: Human[]): number {
     return data.reduce((acc: number, current: Human) => {
         return acc + Number(current.age > 18 && current.gender === 'male');
