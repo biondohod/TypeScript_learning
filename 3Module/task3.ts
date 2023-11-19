@@ -20,16 +20,16 @@ const player: Player = {
     y: 0,
     move: function (direction: string, amount: number) {
         switch (direction) {
-            case 'Up':
+            case Directions.Up:
                 this.y += amount;
                 break;
-            case 'Down':
+            case Directions.Down:
                 this.y -= amount;
                 break;
-            case 'Left':
+            case Directions.Left:
                 this.x -= amount;
                 break;
-            case 'Right':
+            case Directions.Right:
                 this.x += amount;
                 break;
             default:
@@ -38,10 +38,10 @@ const player: Player = {
     }
 }
 
-player.move(Directions['Up'], 1);
-player.move(Directions['Down'], 2);
-player.move(Directions['Left'], 2);
-player.move(Directions['Right'], 3);
+player.move(Directions.Up, 1);
+player.move(Directions.Down, 2);
+player.move(Directions.Left, 2);
+player.move(Directions.Right, 3);
 
 console.log(player.x === 1);
 console.log(player.y === -1);
