@@ -169,5 +169,16 @@ console.log(ApiProvider.getUsers());
 console.log(ApiProvider.auth());
 console.log(ApiProvider.getSomeOther());
 
+const dsfs = {
+    0: 1,
+    1: 2,
+    2: 3,
+}
+const asdfad = {
+    a: 1,
+    b: 2,
+    c: 3,
+}
 
+console.log(JSON.stringify(dsfs) === JSON.stringify(asdfad))
 

@@ -4,12 +4,13 @@ class Job {
         return this.salary;
     }
 
-    work(personName: string): void {
-        console.log(`${personName} сейчас работает как ${this.role}`);
+    work(Person1Name: string): void {
+        console.log(`${Person1Name} сейчас работает как ${this.role}`);
     }
 }
 
-class Person {
+
+class Person1 {
     private job?: Job;
     constructor(private name: string = 'Человек') {}
 
@@ -36,8 +37,8 @@ class Person {
 
 const teacher: Job = new Job('Учитель', 20000);
 const driver: Job = new Job('Водитель', 10000);
-const Andrey: Person = new Person('Андрей');
-const Anton: Person = new Person('Антон');
+const Andrey: Person1 = new Person1('Андрей');
+const Anton: Person1 = new Person1('Антон');
 Andrey.work();
 console.log(Andrey.getSalary());
 Anton.setJob(teacher);
